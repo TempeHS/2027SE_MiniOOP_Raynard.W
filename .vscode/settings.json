@@ -26,14 +26,16 @@
   ],
   "python.analysis.extraPaths": [
     "~/.micropico-stubs/included",
-    "./examples/smooth_"
+    "./examples/smooth_",
+    "/home/codespace/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/typings",
+    "/home/codespace/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/micropython"
   ],
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dark+",
   "workbench.iconTheme": "vscode-icons",
   "github.copilot.enable": {
     "python": false,
     "html": false,
     "css": false
   },
-  "chat.agent.enabled": false
+  "chat.agent.enabled": true
 }
