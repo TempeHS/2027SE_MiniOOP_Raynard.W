@@ -21,14 +21,14 @@
   "micropico.syncFolder": "project",
   // Uncomment and set the device path if you want to specify a device
   // "micropico.devicePath": "/dev/ttyACM0",
-  "python.analysis.typeshedPaths": [
-    "~/.micropico-stubs/included"
-  ],
+  "python.analysis.typeshedPaths": ["~/.micropico-stubs/included"],
   "python.analysis.extraPaths": [
     "~/.micropico-stubs/included",
     "./examples/smooth_",
     "/home/codespace/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/typings",
-    "/home/codespace/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/micropython"
+    "/home/codespace/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/micropython",
+    "/home/vscode/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/typings",
+    "/home/vscode/.vscode-remote/extensions/benpaddlejones.pico-bridge-2.1.4/emulator/mock/micropython"
   ],
   "workbench.colorTheme": "Dark+",
   "workbench.iconTheme": "vscode-icons",
