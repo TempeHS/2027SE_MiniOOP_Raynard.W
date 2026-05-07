@@ -23,7 +23,7 @@ class Servo:
         dead_zone_us=1500,
         freq=50,
     ):
-        """Initialize the Servo object with the given parameters.
+        """Initialise the Servo object with the given parameters.
 
         Args:
             pwm (PWM): A PWM object to control the servo.

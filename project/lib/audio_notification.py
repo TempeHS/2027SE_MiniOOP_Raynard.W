@@ -16,7 +16,7 @@ class Audio_Notification(PWM):
 
     def __init__(self, pin, debug=False):
         """
-        Initialize the Audio_Notification object.
+        Initialise the Audio_Notification object.
 
         Args:
             pin (int): The GPIO pin number to which the buzzer is connected

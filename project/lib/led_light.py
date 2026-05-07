@@ -15,7 +15,7 @@ class Led_Light(Pin):
     """
 
     def __init__(self, pin, flashing=False, debug=False):
-        """Initialize the Led_Light object.
+        """Initialise the Led_Light object.
 
         Args:
             pin (int): The GPIO pin number the LED is connected to.

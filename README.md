@@ -6,16 +6,16 @@ Students will be recreating a model of the pedestrian crossing on Unwins Bridge 
 
 ## Tutorials
 
-| Tutorial | OOP/Pi Pico Concepts Covered |
-| --- | --- |
-| [Lecture0](tutorials\Lecture0.md) | • Introduction Projects<br>• Wokwi<br>• Wire your system |
-| [Lecture1](tutorials\Lecture1.md) | • Unit Testing<br>• UML Class Diagrams<br>• Generalisation<br>• Super/Sub Classes<br>• Instantiation |
-| [Lecture2](tutorials\Lecture2.md) | • Overriding Polymorphism<br>• DRY<br>• Encapsulation<br>• Setter and Getters<br>• Overloading Polymorphism  |
-| [Lecture3](tutorials\Lecture3.md) | • Abstraction<br>• Non-Blocking |
-| [Lecture4](tutorials\Lecture4.md) | • Pull Down Button<br>• Interrupts |
-| [Lecture5](tutorials\Lecture5.md) | • PWM<br>• Stubs and Drivers |
-| [Lecture6](tutorials\Lecture6.md) | • Multiple Inheritance<br>• Association<br>• Facade pattern<br>• Subsystems |
-| [Lecture7](tutorials\Lecture7.md) | • Open & Closed Loop Control Systems<br>• State Machine |
+| Tutorial                          | OOP/Pi Pico Concepts Covered                                                                                |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Lecture0](tutorials\Lecture0.md) | • Introduction Projects<br>• Wokwi<br>• Wire your system                                                    |
+| [Lecture1](tutorials\Lecture1.md) | • Unit Testing<br>• UML Class Diagrams<br>• Generalisation<br>• Super/Sub Classes<br>• Instantiation        |
+| [Lecture2](tutorials\Lecture2.md) | • Overriding Polymorphism<br>• DRY<br>• Encapsulation<br>• Setter and Getters<br>• Overloading Polymorphism |
+| [Lecture3](tutorials\Lecture3.md) | • Abstraction<br>• Non-Blocking                                                                             |
+| [Lecture4](tutorials\Lecture4.md) | • Pull Down Button<br>• Interrupts                                                                          |
+| [Lecture5](tutorials\Lecture5.md) | • PWM<br>• Stubs and Drivers                                                                                |
+| [Lecture6](tutorials\Lecture6.md) | • Multiple Inheritance<br>• Association<br>• Facade pattern<br>• Subsystems                                 |
+| [Lecture7](tutorials\Lecture7.md) | • Open & Closed Loop Control Systems<br>• State Machine                                                     |
 
 <hr>
 
@@ -27,13 +27,13 @@ All projects can be physically wired and tested (see [components list](#componen
 
 ### Projects
 
-1. [Connect and control a LED](introduction_projects/1.blink_led.md)
+1. [Connect and control an LED](introduction_projects/1.blink_led.md)
 2. [Connect a digital sensor that controls the LEDs](introduction_projects/2.digital_sensor.md)
-3. [Connect a analog sensor that controls the LEDs](introduction_projects/3.analog_sensor.md)
+3. [Connect an analogue sensor that controls the LEDs](introduction_projects/3.analog_sensor.md)
 4. [Control the brightness of the LED with Pulse Width Modulation](introduction_projects/4.pulse_width_modulation.md)
 5. [Connect and control a servo motor](introduction_projects/5.servo_control.md)
-6. [Connect and read a ultrasonic sensor use it to control the servo motor](introduction_projects/6.ultrasonic_sensor.md)
-7. [Connect and control a I2C 16x2 LCD Display](introduction_projects/7.I2C_module.md)
+6. [Connect and read an ultrasonic sensor and use it to control the servo motor](introduction_projects/6.ultrasonic_sensor.md)
+7. [Connect and control an I2C 16x2 LCD Display](introduction_projects/7.I2C_module.md)
 
 ### Components Required
 
@@ -45,7 +45,7 @@ All projects can be physically wired and tested (see [components list](#componen
 - Pi Pico
 - 1x LED
 - 1x 130Ω resistors
-- 1x Potentiometer or analog sensor
+- 1x Potentiometer or analogue sensor
 - 1x Momentary switch or digital sensor
 - 1x Servo motor
 - 1x Ultrasonic sensor
@@ -64,8 +64,8 @@ All projects can be physically wired and tested (see [components list](#componen
 | GP13 | Digital Sensor Signal  |
 | GP15 | External LED           |
 | GP25 | Inbuilt LED            |
-| GP26 | Analog Sensor Signal   |
-| AGND | Analog Ground          |
+| GP26 | Analogue Sensor Signal |
+| AGND | Analogue Ground        |
 | GND  | Ground                 |
 | 3V3  | 3V Power               |
 | VBUS | 5V Power               |
@@ -80,7 +80,7 @@ The lectures will guide them through building subsystems like traffic lights and
 
 All projects can be physically wired and tested (see [components list](#components)) or simulated and programmed in the IDE of [Wokwi](https://wokwi.com/).
 
-![A street view image of the system we will be modeling](/images/real_world_situation.png "The traffic lights, pedestrian warning lights, pedestrian button and control system.")
+![A street view image of the system we will be modelling](/images/real_world_situation.png "The traffic lights, pedestrian warning lights, pedestrian button and control system.")
 
 ### Final Product
 
@@ -216,22 +216,22 @@ classDiagram
         +__init__(ped_red: Led_Light, ped_green: Led_Light, traffic_red: Led_Light, traffic_amber: Led_Light, traffic_green: Led_Light, button: Pedestrian_Button, buzzer: Audio_Notification, debug: bool)
         +set_idle_state()
         +set_change_state()
-        +set_walk_state() 
+        +set_walk_state()
         +set_warning_state()
         +set_error_state()
         +update()
-    }  
+    }
 
     TrafficLightSubsystem --o Controller : Contains
-    PedestrianSubsystem --o Controller : Contains   
+    PedestrianSubsystem --o Controller : Contains
 ```
 
 ## Script Versions Provided
 
-| Version | Notes                                                                                                                     |
-| ------- | ------------------------------------------------------------------------------------------------------------------------- |
-| v01.py  | Basic "Blink" Program (the Hello World of mechatronics) for Unit Testing the Microcontroller.                                                                  |
-| v02.py  | Unit Test for wiring and use basic methods from Super `Pin` and `PWM` .                                                                |
+| Version | Notes                                                                                         |
+| ------- | --------------------------------------------------------------------------------------------- |
+| v01.py  | Basic "Blink" Program (the Hello World of mechatronics) for Unit Testing the Microcontroller. |
+| v02.py  | Unit Test for wiring and use basic methods from Super `Pin` and `PWM` .                       |
 
 ##
 

@@ -20,7 +20,7 @@ class TrafficLightSubsystem:
 
     def __init__(self, red, amber, green, debug=False):
         """
-        Initialize the traffic light subsystem.
+        Initialise the traffic light subsystem.
 
         Args:
             red (Led_Light): Red traffic light for vehicles
@@ -87,7 +87,7 @@ class PedestrianSubsystem:
 
     def __init__(self, red, green, button, buzzer, debug=False):
         """
-        Initialize the pedestrian subsystem.
+        Initialise the pedestrian subsystem.
 
         Args:
             red (Led_Light): Red pedestrian light (don't walk)
@@ -186,7 +186,7 @@ class Controller:
         debug=False,
     ):
         """
-        Initialize the crossing controller.
+        Initialise the crossing controller.
 
         Args:
             ped_red (Led_Light): Red pedestrian light
@@ -198,7 +198,7 @@ class Controller:
             buzzer (Audio_Notification): Crossing buzzer
             debug (bool, optional): Enable debug output. Defaults to False.
         """
-        # Initialize subsystems
+        # Initialise subsystems
         self.__traffic_lights = TrafficLightSubsystem(
             traffic_red, traffic_amber, traffic_green, debug
         )

@@ -1,12 +1,13 @@
 ## Led_Light Class
 
-The `Led_Light`  extends the `machine.Pin`  to provide advanced control of an LED, including toggling, non-blocking flashing, and optional debug output.
+The `Led_Light` extends the `machine.Pin` to provide advanced control of an LED, including toggling, non-blocking flashing, and optional debug output.
 
 ## Constructor
 
 ```python
 Led_Light(pin, flashing=False, debug=False)
 ```
+
 - `pin`: The GPIO pin number the LED is connected to.
 - `flashing`: Set to `True` to enable the flash method.
 - `debug`: Set to `True` to enable debug print statements.
@@ -58,9 +59,10 @@ while True:
 
 ---
 
-**Note:**  
+**Note:**
+
 - The LED should be wired with an appropriate resistor to the specified GPIO pin.
-- The  uses the internal features of the `machine.Pin`  for output control.
+- The uses the internal features of the `machine.Pin` for output control.
 
 ## Class Unit Test
 
@@ -122,7 +124,6 @@ else:
 
 ```
 
-
 ## Class Implementation
 
 ```python
@@ -143,7 +144,7 @@ class Led_Light(Pin):
     """
 
     def __init__(self, pin, flashing=False, debug=False):
-        """Initialize the Led_Light object.
+        """Initialise the Led_Light object.
 
         Args:
             pin (int): The GPIO pin number the LED is connected to.
