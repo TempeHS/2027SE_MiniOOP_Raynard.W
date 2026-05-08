@@ -15,6 +15,7 @@
 - [Implement a Driver to Test the Subsystem](implement-a-driver-to-test-the-subsystem)
 
 ## Multiple Inheritance
+
 Multiple Inheritance is used to inherit the properties of multiple classes. However, Python does not allow multiple inheritance from classes that have incompatible memory layouts at the C level, which is common with hardware in MicroPython.
 
 ```mermaid
@@ -38,7 +39,7 @@ classDiagram
     C <|-- D : Inheritance
 ```
 
-This code snippet demonstrates the concept and syntax of multiple inheritance. 
+This code snippet demonstrates the concept and syntax of multiple inheritance.
 
 ```python
 from led_light import Led_Light
@@ -136,10 +137,11 @@ classDiagram
     }
     Led_Light --> PedestrianSubsystem : Association
     Audio_Notification --> PedestrianSubsystem : Association
-    Pedestrian_Button --> PedestrianSubsystem : Association 
+    Pedestrian_Button --> PedestrianSubsystem : Association
 ```
 
-## Facade pattern 
+## Facade pattern
+
 The Facade Pattern provides a simplified interface to a complex subsystem, shielding clients from the complexity of its components. Subsystems help manage complexity, improve modularity, and make systems more maintainable, testable, and understandable.
 
 Continuing our 'Bottom-Up' approach, we will create two subsystems, one for traffic and one for pedestrians.
@@ -243,7 +245,7 @@ class TrafficLightSubsystem:
 
 ## Implement a Driver to Test the Subsystem
 
-The below implemenation is a Drive to test the TrafficLightSubsystem, you shoudl use it as a template to design a test for the PedestrianLightSubsystem.
+The below implementation is a Driver to test the TrafficLightSubsystem; you should use it as a template to design a test for the PedestrianLightSubsystem.
 
 ```python
 from led_light import Led_Light
@@ -254,7 +256,7 @@ red = Led_Light(3, False, True)
 amber = Led_Light(5, False, True)
 green = Led_Light(6, False, True)
 
-light = TrafficLightSubsystem(red, amber, green, False) 
+light = TrafficLightSubsystem(red, amber, green, False)
 
 def Traffic_Subsystem_Driver():
     print(“START Testing Traffic Light in 5 seconds”)

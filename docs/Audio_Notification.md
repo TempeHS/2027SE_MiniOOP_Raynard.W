@@ -1,12 +1,13 @@
 # Audio_Notification Class
 
-The `Audio_Notification`  extends the `machine.PWM`  to provide an interface for controlling a piezo buzzer or speaker, with optional debug output. It supports warning beeps and custom tones.
+The `Audio_Notification` extends the `machine.PWM` to provide an interface for controlling a piezo buzzer or speaker, with optional debug output. It supports warning beeps and custom tones.
 
 ## Constructor
 
 ```python
 Audio_Notification(pin, debug=False)
 ```
+
 - `pin`: The GPIO pin number the buzzer is connected to.
 - `debug`: Set to `True` to enable debug print statements.
 
@@ -42,7 +43,8 @@ buzzer.beep(freq=2000, duration=1000)
 
 ---
 
-**Notes:**  
+**Notes:**
+
 - Use a passive piezo buzzer for best results with PWM.
 - The pin must support PWM output on your board.
 - Call `warning_on()` repeatedly in your main loop for periodic beeping.
@@ -94,7 +96,7 @@ class Audio_Notification(PWM):
 
     def __init__(self, pin, debug=False):
         """
-        Initialize the Audio_Notification object.
+        Initialise the Audio_Notification object.
 
         Args:
             pin (int): The GPIO pin number to which the buzzer is connected

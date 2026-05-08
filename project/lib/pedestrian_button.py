@@ -14,7 +14,7 @@ class Pedestrian_Button(Pin):
     """
 
     def __init__(self, pin, debug):
-        """Initialize the Pedestrian_Button object.
+        """Initialise the Pedestrian_Button object.
 
         Sets up the pin as an input with pull-down resistor and configures
         an interrupt handler for rising edge detection.

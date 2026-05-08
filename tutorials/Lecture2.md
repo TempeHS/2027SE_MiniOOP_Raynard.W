@@ -6,17 +6,17 @@ https://github.com/user-attachments/assets/cd2b7c8e-bbda-4f84-a3c5-0ab8915c28bf
 
 - [Overriding Polymorphism](#overriding-polymorphism)
 - [DRY](#dry)
-    - [Why Use DRY?](#why-use-dry)
+  - [Why Use DRY?](#why-use-dry)
 - [Encapsulation](#encapsulation)
-    - [Benefits of Encapsulation](#benefits-of-encapsulation)
+  - [Benefits of Encapsulation](#benefits-of-encapsulation)
 - [Setters and Getters](#setters-and-getters)
-    - [State Attribute](#state-attribute)
-    - [Getter](#getter)
-    - [Setter](#setter)
-    - [Why Use Setters & Getters](#why-use-setters--getters)
-    - [Test the Setter & Getter](#test-the-setter--getter)
+  - [State Attribute](#state-attribute)
+  - [Getter](#getter)
+  - [Setter](#setter)
+  - [Why Use Setters & Getters](#why-use-setters--getters)
+  - [Test the Setter & Getter](#test-the-setter--getter)
 - [Overloading Polymorphism](#overloading-polymorphism)
-    - [Adhoc Method Overloading](#adhoc-method-overloading)
+  - [Adhoc Method Overloading](#adhoc-method-overloading)
 
 ## Overriding Polymorphism
 
@@ -74,6 +74,7 @@ while True:
 The DRY pattern stands for "**Don't Repeat Yourself**"; it is a fundamental principle of programming aimed at reducing repetition of code and logic. This is to avoid duplicating code, logic, or data.
 
 ### Why Use DRY?
+
 - Maintainability: When logic is defined in only one place, updates or bug fixes are only needed once.
 - Readability: The code is easier to read and understand because there is less repetition.
 - Consistency: Reduces the risk of inconsistencies and errors that can occur when updating duplicated code in multiple places.
@@ -126,9 +127,10 @@ The DRY pattern stands for "**Don't Repeat Yourself**"; it is a fundamental prin
 ```
 
 ## Encapsulation
+
 Encapsulation restricts direct access to some of an object's components (such as attributes or methods), meaning the internal representation of the object is hidden from the outside. This is typically achieved by making certain attributes or methods private (i.e., inaccessible from outside the class), and providing public methods (such as getters and setters) to access or modify those private members.
 
-This Python implementation below demonstrates the concept of encapsulation. Unlike languages such as C++ or C#, Python does not provide true encapsulation. Instead, it uses name mangling to obscure values, rather than completely restricting access to data from outside the object. Additionally, in MicroPython, a streamlined version of Python optimized for microcontrollers, encapsulation features have been excluded to conserve memory. While students are not required to implement this code, they should develop a strong understanding of encapsulation as a principle and disregard Python’s specific limitations in this area.
+This Python implementation below demonstrates the concept of encapsulation. Unlike languages such as C++ or C#, Python does not provide true encapsulation. Instead, it uses name mangling to obscure values, rather than completely restricting access to data from outside the object. Additionally, in MicroPython, a streamlined version of Python optimised for microcontrollers, encapsulation features have been excluded to conserve memory. While students are not required to implement this code, they should develop a strong understanding of encapsulation as a principle and disregard Python’s specific limitations in this area.
 
 ### Benefits of Encapsulation:
 
@@ -207,6 +209,7 @@ def __init__(self, pin, flashing=False, debug=False):
 ```
 
 ### Why Use Setters & Getters
+
 - Encapsulation: Protects the internal state of the object.
 - Validation: Allows you to add checks before changing values.
 - Abstraction: Hides implementation details from users of the class.

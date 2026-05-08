@@ -7,7 +7,6 @@ The `Pedestrian_Button` class extends the `machine.Pin` class to provide a debou
 ```python
 Pedestrian_Button(pin, debug=False)
 ```
-
 - `pin` (`int`): The GPIO pin number the button is connected to.
 - `debug` (`bool`, optional): Enable debug print statements. Defaults to False.
 
@@ -26,10 +25,10 @@ while True:
     if button.button_state():
         print("Pedestrian waiting - processing crossing request")
         # Process crossing request
-
+        
         # Reset the button state after handling
         button.button_state(False)
-
+    
     sleep(0.1)  # Small delay to prevent busy waiting
 ```
 
@@ -39,6 +38,7 @@ while True:
   Multi-purpose method that acts as both getter and setter for the pedestrian waiting state.
   - When called with no arguments: Returns the current waiting state
   - When called with a boolean argument: Sets the waiting state
+  
 - **callback(pin)**  
   Internal interrupt handler that's called when the button is pressed.
   Implements software debouncing (200ms) and sets the pedestrian waiting flag.
